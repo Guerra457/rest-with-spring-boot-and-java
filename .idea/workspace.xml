@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99025791-d45c-4c16-8cff-18d5451dcd73" name="Changes" comment="Implementing exceptions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/math/SimpleMath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/request/converters/NumberConverter.java" afterDir="false" />
+    <list default="true" id="99025791-d45c-4c16-8cff-18d5451dcd73" name="Changes" comment="Code refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/PersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/PersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/MathController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/MathController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/MathController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/math/SimpleMath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/model/Greeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/request/converters/NumberConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/guerra/controllers/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/guerra/model/Greeting.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +161,9 @@
       <updated>1773093325544</updated>
       <workItem from="1773093326673" duration="2021000" />
       <workItem from="1773095376399" duration="5831000" />
-      <workItem from="1778269476770" duration="7498000" />
+      <workItem from="1778269476770" duration="7678000" />
+      <workItem from="1778385448214" duration="2015000" />
+      <workItem from="1778454852313" duration="3637000" />
     </task>
     <task id="LOCAL-00001" summary="project creation">
       <option name="closed" value="true" />
@@ -172,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778270944612</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Code refactoring">
+      <option name="closed" value="true" />
+      <created>1778308039043</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778308039043</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +209,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project creation" />
     <MESSAGE value="Implementing exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing exceptions" />
+    <MESSAGE value="Code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code refactoring" />
   </component>
 </project>
