@@ -3,18 +3,18 @@ package br.com.guerra.services;
 import br.com.guerra.exception.ResourceNotFoundException;
 import br.com.guerra.model.Person;
 import br.com.guerra.repository.PersonRepository;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.logging.Logger;
 
 @Service
 public class PersonService {
 
     private final AtomicLong counter = new AtomicLong();
-    private Logger logger = Logger.getLogger(PersonService.class.getName());
+    private org.slf4j.Logger logger = LoggerFactory.getLogger(PersonService.class.getName());
 
     @Autowired
     PersonRepository repository;
