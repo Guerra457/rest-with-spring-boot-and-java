@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99025791-d45c-4c16-8cff-18d5451dcd73" name="Changes" comment="Database connection and class refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/TestLogController.java" afterDir="false" />
+    <list default="true" id="99025791-d45c-4c16-8cff-18d5451dcd73" name="Changes" comment="log tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/data/dto/PersonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/mapper/ObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/guerra/unitetests/mapper/ObjectMapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/guerra/unitetests/mapper/mocks/MockPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/controllers/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/guerra/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/guerra/services/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,41 +60,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.RestWithSpringBootAndJavaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rest-with-spring-boot-and-java [clean...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rest-with-spring-boot-and-java [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.RestWithSpringBootAndJavaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Startup.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Matheus/IdeaProjects/rest-with-spring-boot-and-java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.RestWithSpringBootAndJavaApplication.executor": "Run",
+    "Application.Startup.executor": "Run",
+    "JUnit.ObjectMapperTests.executor": "Run",
+    "Maven.rest-with-spring-boot-and-java [clean...].executor": "Run",
+    "Maven.rest-with-spring-boot-and-java [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.RestWithSpringBootAndJavaApplication.executor": "Run",
+    "Spring Boot.Startup.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Matheus/IdeaProjects/rest-with-spring-boot-and-java/src/test/java/br/com/guerra/unitetestes/mapper",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matheus\IdeaProjects\rest-with-spring-boot-and-java\src\test\java\br\com\guerra\unitetestes\mapper" />
       <recent name="C:\Users\Matheus\IdeaProjects\rest-with-spring-boot-and-java" />
       <recent name="C:\Users\Matheus\IdeaProjects\rest-with-spring-boot-and-java\src\test" />
       <recent name="C:\Users\Matheus\IdeaProjects\rest-with-spring-boot-and-java\rest-with-spring-boot-and-java\src\test" />
@@ -101,19 +107,35 @@
       <recent name="C:\Users\Matheus\IdeaProjects\rest-with-spring-boot-and-java\src\main\java\br\com\guerra" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.guerra.unitetestes.mapper.mocks" />
       <recent name="br.com.guerra.services" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.guerra.data.dto" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Startup">
+  <component name="RunManager" selected="Application.Startup">
     <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PASSWORD" value="464743" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="br.com.guerra.Startup" />
+      <module name="rest-with-spring-boot-and-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ObjectMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-with-spring-boot-and-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.guerra.services.*" />
+          <option name="PATTERN" value="br.com.guerra.unitetests.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="br.com.guerra.unitetests.mapper" />
+      <option name="MAIN_CLASS_NAME" value="br.com.guerra.unitetests.mapper.ObjectMapperTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,12 +153,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.Startup" />
+      <item itemvalue="JUnit.ObjectMapperTests" />
       <item itemvalue="Spring Boot.Startup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Startup" />
         <item itemvalue="Application.Startup" />
+        <item itemvalue="JUnit.ObjectMapperTests" />
+        <item itemvalue="Spring Boot.Startup" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +187,7 @@
       <workItem from="1778269476770" duration="7678000" />
       <workItem from="1778385448214" duration="2015000" />
       <workItem from="1778454852313" duration="9431000" />
-      <workItem from="1778616044141" duration="3956000" />
+      <workItem from="1778616044141" duration="7954000" />
     </task>
     <task id="LOCAL-00001" summary="project creation">
       <option name="closed" value="true" />
@@ -205,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778477830685</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="log tests">
+      <option name="closed" value="true" />
+      <created>1778638742005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778638742005</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +260,7 @@
     <MESSAGE value="Code refactoring" />
     <MESSAGE value="Creation of search, update and delete operations" />
     <MESSAGE value="Database connection and class refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database connection and class refactoring" />
+    <MESSAGE value="log tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="log tests" />
   </component>
 </project>
